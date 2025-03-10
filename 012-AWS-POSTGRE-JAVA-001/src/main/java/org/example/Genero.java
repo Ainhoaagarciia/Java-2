@@ -37,27 +37,6 @@ public class Genero {
         this.lsGeneros = lsGeneros;
     }
 
-    public void agregarPelicula(Pelicula pelicula) {
-        if (pelicula != null) {
-            lsGeneros.add(pelicula);
-        }
-    }
-    
-    // Método para eliminar una película del género
-    public void eliminarPelicula(Pelicula pelicula) {
-        lsGeneros.remove(pelicula);
-    }
-
-    public void mostrarPeliculas() {
-        System.out.println("Películas de género: " + this.titulo);
-        if (lsGeneros != null ) {
-            for (Pelicula pelicula : lsGeneros) {
-                System.out.println(pelicula);
-            }
-        } else {
-            System.out.println("No hay películas en este género.");
-        }
-
     @Override
     public String toString() {
         return "Genero{" +
