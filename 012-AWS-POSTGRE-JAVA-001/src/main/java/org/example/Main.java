@@ -78,6 +78,25 @@ public class Main
                 System.out.println(p);
             }
 
+            // Crear géneros
+            Genero accion = new Genero(1, "Acción");
+            Genero comedia = new Genero(2, "Comedia");
+
+            // Crear películas
+            Pelicula peli1 = new Pelicula(101, "Mad Max: Fury Road", "George Miller", 2015, accion);
+            Pelicula peli2 = new Pelicula(102, "Deadpool", "Tim Miller", 2016, comedia);
+
+            accion.eliminarPelicula(peli1);
+
+            // Agregar películas a su género correspondiente
+            accion.agregarPelicula(peli1);
+            comedia.agregarPelicula(peli2);
+
+            // Imprimir resultados
+            System.out.println(accion);
+            System.out.println(comedia);
+            accion.mostrarPeliculas();
+
         } catch (Exception ex) {
             throw new RuntimeException(ex);
         }
